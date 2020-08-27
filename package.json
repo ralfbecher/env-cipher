@@ -1,0 +1,25 @@
+{
+  "name": "env-cipher",
+  "version": "0.1.0",
+  "description": "A module to encrypt and decrypt ENV variables",
+  "main": "./lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ralfbecher/env-cipher"
+  },
+  "scripts": {
+    "test": "nodemon ./test/test.js",
+    "certgen": "openssl req -newkey rsa:2048 -new -nodes -x509 -out ./ssl/cert.pem -days 3650 -subj /CN=localhost"
+  },
+  "bin": {
+    "env-cipher": "./lib/cli.js"
+  },
+  "author": {
+    "name": "Ralf Becher"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "minimist": "^1.2.5"
+  }
+}
