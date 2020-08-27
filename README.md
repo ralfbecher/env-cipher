@@ -15,7 +15,7 @@ Create a `.env` file in the root directory of your project. Add environment-spec
 ```dosini
 ACCOUNT=hazfd783.cloudname.com
 USER=fridolinhamster
-ASSWORD=y0uw1lln0tbr4ek
+PASSWORD=y0uw1lln0tbr4ek
 DATABASE=hr.salaries
 SCHEMA=management
 ROLE=SYSADMIN
@@ -35,7 +35,7 @@ After running the CLI command the encrypted values resulting into:
 ```dosini
 ACCOUNT_CIPHER=6478b68193c03a3c0bdadec46f89a09eef5beb55077d5c4cf7e72f733d3d75b4
 USER_CIPHER=17e766942fe4fa19068202c4138c517a
-ASSWORD_CIPHER=1ccd001d85277b9be50da994590e5f7f
+PASSWORD_CIPHER=1ccd001d85277b9be50da994590e5f7f
 DATABASE_CIPHER=374eab00f4a46cd2276ef8b9f6ce9f27
 SCHEMA_CIPHER=a4a62c29f0a2f50d06c414ff91ebd676
 ROLE_CIPHER=506824248ee4729c22381fd838139c49
