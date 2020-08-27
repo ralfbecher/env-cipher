@@ -23,13 +23,15 @@ URL=localhorst:8123
 ```
 ### Encrypt .env values
 
-REVIEW npx command!
 ```bash
 $ npm install -g env-cipher
+$ npx env-cipher
+# or
 $ env-cipher .env -s mySecretPassword
+
 ```
 
-Then run CLI command `npx env-cipher` to encrypt the values into `.env-cipher`. Resulting encrypted values:
+After running the CLI command the encrypted values resulting into:
 ```dosini
 ACCOUNT_CIPHER=6478b68193c03a3c0bdadec46f89a09eef5beb55077d5c4cf7e72f733d3d75b4
 USER_CIPHER=17e766942fe4fa19068202c4138c517a
@@ -68,3 +70,14 @@ process.env = {
     ...decrypted
 }
 ```
+
+## Dependencies
+
+Env-cipher uses these open source projects to work properly:
+
+* [Minimist][minimist] - for parsing CLI arguments
+* [Dotenv][dotenv] - for parsing .env file
+
+## License
+
+[MIT](LICENSE)

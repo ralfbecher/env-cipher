@@ -1,4 +1,4 @@
-const run = require('env-cipher');
+const run = require('../lib/index');
 
 // encrypt values to .env-cipher
 run.envCipher();
