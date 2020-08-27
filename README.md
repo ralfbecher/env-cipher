@@ -78,6 +78,9 @@ Env-cipher uses these open source projects to work properly:
 * [Minimist][minimist] - for parsing CLI arguments
 * [Dotenv][dotenv] - for parsing .env file
 
+[minimist]: <https://www.npmjs.com/package/minimist>
+[dotenv]: <https://github.com/motdotla/dotenv/>
+
 ## License
 
 [MIT](LICENSE)

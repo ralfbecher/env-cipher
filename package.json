@@ -1,6 +1,6 @@
 {
   "name": "env-cipher",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A module to encrypt and decrypt ENV variables",
   "main": "./lib/index.js",
   "repository": {
@@ -14,6 +14,12 @@
   "bin": {
     "env-cipher": "./lib/cli.js"
   },
+  "keywords": [
+    "dotenv",
+    "secure-env",
+    "encrypt-env",
+    "decrypt-env"
+  ],
   "author": {
     "name": "Ralf Becher"
   },
