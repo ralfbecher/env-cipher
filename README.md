@@ -4,11 +4,11 @@
 
 # env-cipher
 
-Env-cipher is a module that reads encrypted environment variables with a certain suffix (default: `_CIPHER`) from `process.env` and decrypts it. The result can then be stored back into `process.env` and used in a node.js app as usual.
+Env-cipher is a module that reads encrypted environment variables with a specific suffix (default: `_CIPHER`) from `process.env` and decrypts it. The result can then be stored back into `process.env` and used in a node.js app as usual.
 
-It also has a CLI to create a `.env-cipher` file with encrypted variable values, additionally a `.env-cipher.yaml` file is created for environment usage in docker or kubernetes context.
+It also has a CLI to create a `.env-cipher` file with encrypted variable values. Additionally, a `.env-cipher.yaml` file is created for environment usage in the Docker or Kubernetes context.
 
-The idea behind is to only use encrypted settings in deployment files or secrets or cloud vaults. A secret file (eg. a certificate) can be used to encrypt the values during development or CI/CD. For decryption the secret file can be placed inside the node.js docker container (in best case use a distroless image!) to process the decryption.
+The idea behind is to only use encrypted settings in deployment files or secrets or cloud vaults. A secret file (e.g. a certificate) can be used to encrypt the values during development or CI/CD. For decryption, the secret file can be placed inside the node.js docker container (in best case use a distroless image!) to process the decryption.
 
 ## Usage
 
@@ -35,7 +35,7 @@ $ env-cipher .env -s mySecretPassword
 
 ```
 
-After running the CLI command the encrypted values resulting into:
+After running the CLI command the encrypted values resulting in:
 ```dosini
 ACCOUNT_CIPHER=6478b68193c03a3c0bdadec46f89a09eef5beb55077d5c4cf7e72f733d3d75b4
 USER_CIPHER=17e766942fe4fa19068202c4138c517a
