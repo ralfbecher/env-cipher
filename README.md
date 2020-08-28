@@ -1,10 +1,14 @@
+[![NPM version](https://img.shields.io/npm/v/env-cipher.svg?style=flat-square)](https://www.npmjs.com/package/env-cipher)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/ralfbecher/env-cipher/graphs/commit-activity)
+[![LICENSE](https://img.shields.io/github/license/ralfbecher/env-cipher.svg)](LICENSE)
+
 # env-cipher
 
 Env-cipher is a module that reads encrypted environment variables with a certain suffix (default: `_CIPHER`) from `process.env` and decrypts it. The result can then be stored back into `process.env` and used in a node.js app as usual.
 
 It also has a CLI to create a `.env-cipher` file with encrypted variable values, additionally a `.env-cipher.yaml` file is created for environment usage in docker or kubernetes context.
 
-The idea behind is to only use encrypted settings in deployment files or secrets or cloud vaults. A secret file (eg. a certificate) can be used to encrypt the values during development or CI/CD. For decryption the secret file can be placed inside the node.js docker container (inbest case use a distroless image!) to process the decryption.
+The idea behind is to only use encrypted settings in deployment files or secrets or cloud vaults. A secret file (eg. a certificate) can be used to encrypt the values during development or CI/CD. For decryption the secret file can be placed inside the node.js docker container (in best case use a distroless image!) to process the decryption.
 
 ## Usage
 
@@ -66,7 +70,7 @@ const { envDecipher } = require('env-cipher');
 const decrypted = envDecipher();
 
 process.env = {
-    process.env,
+    ...process.env,
     ...decrypted
 }
 ```
