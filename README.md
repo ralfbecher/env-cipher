@@ -57,6 +57,27 @@ environment:
   - URL_CIPHER=31fe6850775707846d5c8aa56a5d9c84
 ```
 
+## Options for CLI encoding
+
+```bash
+$ env-cipher --option <VALUE> <path-to-.env-file>
+```
+
+| Option | What does it do | Defaults |
+| ------ | ------ | ------ |
+| --secretFile <file-path> | use a file content as encrytion key (default) | `./ssl/cert.pem` |
+| --secret <secretKey> | alternativly use a secret key or passphrase for encryption | `<empty>` |
+| --algo <algoName> | encryption algorithm | `aes256` |
+| --suffix <suffix> | suffix which will be attached to variable name | `_CIPHER` |
+| --encoding <encoding> | encoding of .env file | `utf8` |
+
+
+To decrypt a .env-cipher file and print values to stdout run:
+
+```bash
+$ npm run decrypt
+```
+
 ### Usage in your Node.js App
 
 ```bash
@@ -73,6 +94,20 @@ process.env = {
     ...process.env,
     ...decrypted
 }
+```
+
+### Options for decrytion 
+
+are the same as in CLI as object parameter except `encoding`:
+
+```javascript
+const { envDecipher } = require('env-cipher');
+const decrypted = envDecipher({
+    'secretFile': './ssl/cert.pem',
+    //'secret': 'mysecret'
+    'algo': 'aes256',
+    'suffix': '_CIPHER'
+});
 ```
 
 ## Dependencies
